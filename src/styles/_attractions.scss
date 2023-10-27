@@ -1,0 +1,121 @@
+@use 'variables';
+
+.attractions {
+    padding: 80px 0;
+    
+    &__call {
+        padding: 14px;
+        display: flex;
+        justify-content: center;
+        background-color: variables.$blue1;
+    }
+
+    &__bolo {
+        --s: 100px;
+        --c: #0000 75%,#442bdb 0;
+        --g1: conic-gradient(at 75% 25%,var(--c));
+        --g2: conic-gradient(at 25% 75%,var(--c));
+        background: 
+        var(--g1),var(--g1) var(--s) var(--s),
+        var(--g1),var(--g2) var(--s) var(--s) #EFD9B4;
+        background-size: calc(2*var(--s)) calc(2*var(--s));
+    }
+
+    &__docinhos {
+        --s: 100px;
+        --c: #0000 75%,#1b6ca7 0;
+        --g1: conic-gradient(at 75% 25%,var(--c));
+        --g2: conic-gradient(at 25% 75%,var(--c));
+        background: 
+        var(--g1),var(--g1) var(--s) var(--s),
+        var(--g1),var(--g2) var(--s) var(--s) #EFD9B4;
+        background-size: calc(2*var(--s)) calc(2*var(--s));
+    }
+
+    &__dcHeros {
+        --s: 100px;
+        --c: #0000 75%,#442bdb 0;
+        --g1: conic-gradient(at 75% 25%,var(--c));
+        --g2: conic-gradient(at 25% 75%,var(--c));
+        background: 
+        var(--g1),var(--g1) var(--s) var(--s),
+        var(--g1),var(--g2) var(--s) var(--s) #EFD9B4;
+        background-size: calc(2*var(--s)) calc(2*var(--s));
+    }
+
+    &__balao {
+        --s: 100px;
+        --c: #0000 75%,#1b6ca7 0;
+        --g1: conic-gradient(at 75% 25%,var(--c));
+        --g2: conic-gradient(at 25% 75%,var(--c));
+        background: 
+        var(--g1),var(--g1) var(--s) var(--s),
+        var(--g1),var(--g2) var(--s) var(--s) #EFD9B4;
+        
+        background-size: calc(2*var(--s)) calc(2*var(--s));
+    }
+
+    &__left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        
+    }
+
+
+
+    &__image {
+        max-width: 360px;
+    }
+
+    &__details {
+        background-color: rgba(variables.$pink, 0.9);
+        padding: 8px;
+
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &__call {
+            font-size: 40px;
+            text-shadow: 1px 1px 2px variables.$pink;
+
+            @media (max-width: 640px) {
+                &__footer {
+                    display: none;
+                }
+            }
+        }
+
+        &__description {
+            line-height: 22px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__details {
+            margin-right: 0;
+            margin-bottom: 16px;
+            
+            &__call {
+            font-size: 20px;
+            }
+        }
+
+
+    }
+}
